@@ -6,153 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jero Benedict Telos | IT Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+   
+/* PROJECTS SECTION */
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-            line-height: 1.6;
-        }
+#projects {
+    background: #111c33;
+}
 
-        header {
-            background: #111c33;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-        }
+#projects h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+    position: relative;
+}
 
-        header h2 {
-            color: #38bdf8;
-        }
+#projects h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #38bdf8;
+    margin-top: 10px;
+    border-radius: 10px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+.project-card {
+    position: relative;
+    background: linear-gradient(145deg, #1e293b, #142035);
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 30px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
 
-        section {
-            padding: 80px 10%;
-        }
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+}
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 35px rgba(56, 189, 248, 0.18);
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+.project-icon {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
 
-        .hero h1 span {
-            color: #38bdf8;
-        }
+.project-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
 
-        .hero p {
-            color: #cbd5e1;
-            max-width: 600px;
-            margin-bottom: 25px;
-        }
+.project-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
 
-        .btn {
-            display: inline-block;
-            background: #0284c7;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            width: fit-content;
-        }
+.project-tag {
+    display: inline-block;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.10);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 4px 3px 0 0;
+}
 
-        .btn:hover {
-            background: #0369a1;
-        }
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 25px;
-            font-size: 30px;
-        }
+.project-link:hover {
+    color: white;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .card p {
-            color: #cbd5e1;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skills span {
-            background: #1e293b;
-            padding: 12px 20px;
-            border-radius: 6px;
-            color: #38bdf8;
-        }
-
-        .contact a {
-            color: #38bdf8;
-        }
-
-        footer {
-            background: #111c33;
-            text-align: center;
-            padding: 25px;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            nav a {
-                margin: 0;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            section {
-                padding: 60px 7%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -238,33 +188,54 @@
     </div>
 </section>
 
+
 <section id="projects">
     <h2>My Projects</h2>
 
-    <div class="card">
-        <h3>Database Management Project</h3>
-        <p>
-            Designed database structures and worked with
-            SQL queries, tables and relationships.
-        </p>
-    </div>
+    <div class="project-container">
 
-    <div class="card">
-        <h3>Machine Learning Project</h3>
-        <p>
-            Explored machine learning using Python and
-            libraries such as Pandas, NumPy and Scikit-learn.
-        </p>
-    </div>
+        <div class="project-card">
+            <div class="project-icon">🗄️</div>
+            <h3>Database Management</h3>
+            <p>
+                Designed database structures, created tables,
+                established relationships and practised SQL
+                queries for managing information.
+            </p>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Database</span>
+            <span class="project-tag">SQL</span>
+        </div>
 
-    <div class="card">
-        <h3>Personal Portfolio Website</h3>
-        <p>
-            Created a responsive website using HTML and CSS
-            and published it using GitHub Pages.
-        </p>
+        <div class="project-card">
+            <div class="project-icon">🤖</div>
+            <h3>Machine Learning</h3>
+            <p>
+                Explored machine learning using Python.
+                Worked with datasets, data preparation
+                and prediction models.
+            </p>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Pandas</span>
+            <span class="project-tag">Scikit-learn</span>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>Personal Portfolio</h3>
+            <p>
+                Developed a personal portfolio website
+                to showcase my education, technical skills,
+                projects and professional background.
+            </p>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">GitHub</span>
+        </div>
+
     </div>
 </section>
+
 
 <section id="contact" class="contact">
     <h2>Contact Me</h2>
