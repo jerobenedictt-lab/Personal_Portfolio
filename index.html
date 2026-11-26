@@ -8,6 +8,180 @@
 
     <style>
 
+        
+/* GENERAL WEBSITE STYLE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: #111c33;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* HOME */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 15px 0 25px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0369a1;
+    transform: translateY(-3px);
+}
+
+/* GENERAL CARDS */
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: #38bdf8;
+}
+
+/* CONTACT */
+
+.contact a {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111c33;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    section {
+        padding: 60px 7%;
+    }
+}
+
+        
 #projects {
     background: #111c33;
 }
@@ -240,7 +414,8 @@
     <h2>Contact Me</h2>
 
     <div class="card">
-        <p>Email: jerobenedictt@gmail.com@example.com</p>
+        <p>Email: <a href="mailto:jerobenedictt@gmail.com">
+        jerobenedictt@gmail.com</a></p>
         <p>Location: Adelaide, South Australia</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/"
         target="_blank">My LinkedIn Profile</a></p>
